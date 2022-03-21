@@ -1,0 +1,41 @@
+.iconstep2{
+    width: 78%;
+    margin-top: 27px;
+    margin: auto;
+}
+.iconimage{
+    margin: 12px;
+    margin-top: 25px;
+}
+.que{
+    font-family: Noto Sans;
+    font-style: SemiBold;
+    font-size: 23px;
+    line-height: 170%;
+   Vertical-align: Top;
+   text-transform: none !important;
+   letter-spacing: -0.41px;
+   font-weight: 700;
+   padding-bottom:41px !important;
+}
+.MuiTypography-root.MuiTypography-body1.MuiFormControlLabel-label.css-ahj2mt-MuiTypography-root{
+    width:194px;
+    text-align:inherit !important;
+}
+.MuiGrid-root.MuiGrid-container.MuiGrid-item.MuiGrid-grid-md-6.css-1hfcgjl-MuiGrid-root{
+    padding-top: 50px;
+}
+.optionstep2{
+    margin-top:40px !important;
+    margin:auto;
+    width:81%;
+}
+.submit-answer2{
+    background-color: white !important;
+    color:#000000 !important;
+    margin-top: -34px !important;
+
+}
+.MuiFormControlLabel-root.MuiFormControlLabel-labelPlacementEnd.css-j204z7-MuiFormControlLabel-root{
+    margin-left:-32px;
+}

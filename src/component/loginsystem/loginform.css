@@ -1,0 +1,46 @@
+.titlelogo{
+    margin: auto;
+    padding-bottom:55px;
+}
+.loginpage{
+    width:34%;
+    margin:auto;
+    padding-top: 37px;
+   
+    
+}
+.MuiTypography-colorTextSecondary {
+    color: #718096;
+}
+.MuiTypography-alignCenter {
+    text-align: center;
+}
+.MuiTypography-subtitle1 {
+    font-size: 1rem;
+    font-family: Lato;
+    font-weight: 400;
+    line-height: 1.75;
+}
+.MuiTypography-root {
+    margin: 0;
+}
+a{
+    text-decoration: none !important;
+}
+button.button{
+    padding: 10px;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(114, 14, 55);
+}
+button.button:hover{
+    box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%), 0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
+    color: rgb(255, 255, 255);
+    background-color: rgb(114, 14, 55);
+}
+label.Mui-focused{
+    color:rgb(114, 14, 55) !important;
+}
+.Mui-focused fieldset{
+    border-color:rgb(114, 14, 55) !important;
+}

@@ -1,0 +1,32 @@
+.css-2m9kme-MuiFormControl-root{
+    margin:46px !important;
+    width:276px !important;
+}
+.MuiMenuItem-root.MuiMenuItem-gutters.MuiButtonBase-root.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root{
+    border-bottom: 2px solid black !important;
+}
+.submitanswerstep4{
+    background-color: white !important;
+    color:#000000 !important;
+    margin-top: 0px !important;
+}
+.checkbox{
+    border-radius: 50% !important;
+}
+
+.css-16awh2u-MuiAutocomplete-root .MuiOutlinedInput-root{
+    padding: 2px !important;
+}
+.MuiAutocomplete-root.MuiAutocomplete-hasPopupIcon.css-16awh2u-MuiAutocomplete-root{
+    width: 298px !important ;
+    margin: auto !important;
+    margin-top:45px !important
+}
+.popular{
+    margin-top: 69px !important;
+    margin: 45px;
+    width: 136px;
+}
+.submit-answer{
+    width: 135px !important;
+}

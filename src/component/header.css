@@ -1,0 +1,13 @@
+.logo{
+    margin:auto;
+    width:60%;
+    margin-top:20px;
+}
+.header-buttons{
+    margin-top: 5px;
+    margin-left: 74%;
+}
+.header-buttons button.button{
+    font-size: 13px !important;
+    padding: 7px !important;
+}
