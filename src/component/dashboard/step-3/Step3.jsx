@@ -23,11 +23,10 @@ const Step3 = () => {
   };
   const navigate = useNavigate();
   const handlesubmitanswer = (e) => {
-    localStorage.setItem("step3",checked)
-   if (checked === "By Region") {
-     
-     navigate("/step-4");
-   }
+    localStorage.setItem("step3", checked)
+    if (checked === "By Region") {
+      navigate("/step-4");
+    }
 
   };
   return (
@@ -48,7 +47,7 @@ const Step3 = () => {
           </div>
           <div className="optionstep3">
             <RadioGroup
-            onChange={(e) => (handleChange(e))}
+              onChange={(e) => (handleChange(e))}
               aria-labelledby="demo-radio-buttons-group-label"
               defaultValue="wine"
               name="radio-buttons-group"
@@ -57,25 +56,25 @@ const Step3 = () => {
                 control={<Radio color="primary" />}
                 value={"By Food Pairing"}
                 label="By Food Pairing"
-                name="wine_type"
+                name="best_wine_matches"
               />
               <FormControlLabel
                 control={<Radio color="primary" />}
                 value={"By Region"}
                 label="By Region"
-                name="wine_type"
+                name="best_wine_matches"
               />
               <FormControlLabel
                 control={<Radio color="primary" />}
                 value={"By Grape Variety"}
                 label="By Grape Variety"
-                name="wine_type"
+                name="best_wine_matches"
               />
               <FormControlLabel
                 control={<Radio color="primary" />}
                 value={"By Occasion"}
                 label="By Occasion"
-                name="wine_type"
+                name="best_wine_matches"
               />
             </RadioGroup>
           </div>
