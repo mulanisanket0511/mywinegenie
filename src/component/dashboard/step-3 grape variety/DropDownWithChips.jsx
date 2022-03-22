@@ -1,8 +1,33 @@
 import { Chip, FormControl, InputLabel, MenuItem, OutlinedInput, Select } from '@mui/material'
-import React from 'react'
+import React, { useState } from 'react'
 
+
+const ITEM_HEIGHT = 48;
+const ITEM_PADDING_TOP = 8;
+const MenuProps = {
+  PaperProps: {
+    style: {
+      maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
+      width: 250,
+    },
+  },
+};
 const DropDownWithChips = ({ grape }) => {
-    const [topRed, setTopRed] = useState([])
+    const names = ["Chardonnay","Riesling","Sauvignon Blanc","Pinot Gris","White Bland"]
+    const [top, setTop] = useState([])
+    localStorage.setItem(grape,JSON.stringify(top))
+    const handleChange = (event) => {
+        const {
+          target: { value },
+        } = event;
+        setTop(
+          typeof value === 'string' ? value.split(',') : value,
+        );
+      };
+      const handleDelete = (e, index) => {
+        top.splice(index, 1)
+        setTop([...top])
+      }
     return (
         <div>
             <FormControl sx={{ m: 1, width: 300 }}>
@@ -11,11 +36,12 @@ const DropDownWithChips = ({ grape }) => {
                     labelId="demo-multiple-chip-label"
                     id="demo-multiple-chip"
                     multiple
-                    value={topRed}
+                    placeholder={grape}
+                    value={top}
                     onChange={handleChange}
                     input={<OutlinedInput id="select-multiple-chip" label={grape} />}
                     renderValue={(selected) => {
-                        setPersonName(selected)
+                        setTop(selected)
                     }}
                     MenuProps={MenuProps}
                 >
@@ -33,9 +59,11 @@ const DropDownWithChips = ({ grape }) => {
                     </MenuItem>
                 </Select>
             </FormControl>
-            {personName.map((value, index) => (
+            <div className='px-4'>
+            {top.map((value, index) => (
                 value === undefined ? null : <Chip className="m-2" onDelete={(e) => (handleDelete(e, index))} key={value} label={value} />
             ))}
+            </div>
         </div>
     )
 }

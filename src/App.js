@@ -11,7 +11,7 @@ import By_region from "./component/dashboard/step-3 region/By_region";
 import MultipleSelectChip from "./DropDownWithAutoSelect";
 import By_ocassion from "./component/dashboard/step-3 ocassion/By_occasion";
 import By_food from "./component/dashboard/step-3 food pair/By_food";
-import By_grape from "./component/dashboard/step-3 grape variety/By_grape";
+import By_grape from "./component/dashboard/step-3 grape variety/By_grap";
 
 function App() {
   

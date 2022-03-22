@@ -33,8 +33,6 @@ const MenuProps = {
   },
 };
 
-// const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
-// const checkedIcon = <CheckBoxIcon fontSize="small" />;
 const names = ["Argentina", "Australia", "Austria", "Bulgaria", "Canada"];
 
 const By_region = () => {
