@@ -7,6 +7,7 @@ import svgicon from "../../../asset/component/step1/bottle.svg"
 import { useNavigate } from "react-router-dom";
 
 const Step1 = () => {
+  const navigate = useNavigate()
   const [checked, setChecked] = useState({
     0: false,
     1: false,
@@ -19,7 +20,6 @@ const Step1 = () => {
   const handleChange = (event, index) => {
     setChecked({ ...checked, [index]: event.target.checked })
   }
-  const navigate = useNavigate()
   const handlesubmitanswer = (e) => {
     for (let [key, value] of Object.entries(checked)) {
       if (value === true) {

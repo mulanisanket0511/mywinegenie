@@ -8,8 +8,11 @@ import Step1 from "./component/dashboard/step-1/Step1";
 import Step2 from "./component/dashboard/step-2/Step2";
 import Step3 from "./component/dashboard/step-3/Step3";
 import By_region from "./component/dashboard/step-3 region/By_region";
+import By_occasion from "./component/dashboard/step-3 ocassion/By_occasion";
+import MultipleSelectChip from "./DropDownWithAutoSelect";
 
 function App() {
+  
   return (
     <>
       <Router>

@@ -3,6 +3,7 @@ import {
   Button,
   Card,
   Checkbox,
+  Chip,
   Grid,
 } from "@mui/material";
 import React from "react";
@@ -23,6 +24,7 @@ import svgicon2 from "../../../asset/component/step2/bottle2step2.svg";
 import svgicon3 from "../../../asset/component/step3/bottle3step3.svg";
 import svgicon4 from "../../../asset/component/step4/bottle4step4.svg";
 import "./By_region.css";
+import { useTheme } from "@emotion/react";
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
@@ -40,29 +42,25 @@ const checkedIcon = <CheckBoxIcon fontSize="small" />;
 const names = ["Argentina", "Australia", "Austria", "Bulgaria", "Canada"];
 
 const By_region = () => {
-  const [checked, setChecked] = React.useState("");
-  const [countryName, setcountryName] = React.useState([]);
-  var selectedRegion = []
-  // console.log(selectedRegion);
-  const handleCountry = (event) => {
-    const {
-      target: { value },
-    } = event;
-    setcountryName(
-      // On autofill we get a stringified value.
-      typeof value === "string" ? value.split(",") : value
-    );
-  };
-
+  const theme = useTheme();
+  const [personName, setPersonName] = React.useState([]);
+  console.log(personName);
   const handleChange = (event) => {
-    setChecked(event.target.value);
+      const {
+          target: { value },
+      } = event;
+      setPersonName(
+          typeof value === 'string' ? value.split(',') : value,
+      );
   };
+  const handleDelete = (e,index) => {
+      personName.splice(index,1)
+      setPersonName([...personName])
+  }
+  const [checked, setChecked] = React.useState("");
   const navigate = useNavigate();
   const handlesubmitanswer = (e) => {
-    localStorage.setItem("step3", checked);
-    if (checked === "By Region") {
-      navigate("/step-4");
-    }
+    
   };
   return (
     <div>
@@ -82,62 +80,46 @@ const By_region = () => {
             </p>
           </div>
           <div>
-            <Autocomplete
-              multiple
-              id="checkboxes-tags-demo"
-              options={names}
-              disableCloseOnSelect
-              getOptionLabel={(option) => option}
-              renderOption={(props, option, { selected }) => {
-                if (selected) {
-                  selectedRegion.push(option)
-                  console.log(selectedRegion);
-                }
-                return(
-                  <>
-                <li {...props}>
-                  <Checkbox
-                    className="checkbox"
-                    icon={icon}
-                    checkedIcon={checkedIcon}
-                    style={{ marginRight: 8 }}
-                    checked={selected}
-                    
-                  />
-                  {option}
-              
-               
-                </li>
-               <li>
-               <Button  className="submit-answer"
-            variant="contained"
-            onClick={selectedRegion.push("france")}
-            size="large"
-            > france
-        </Button> 
-               </li>
-                </>
-              )}}
-              style={{ width: 300 }}
-              renderInput={(params) => {
-                return(
-                <TextField 
-                  label="Region"
-                  {...params}
-                />
-                
-              )}}
-            />
-           
+            <FormControl sx={{ m: 1, width: 300 }}>
+              <InputLabel id="demo-multiple-chip-label">Region</InputLabel>
+              <Select
+                labelId="demo-multiple-chip-label"
+                id="demo-multiple-chip"
+                multiple
+                value={personName}
+                onChange={handleChange}
+                input={<OutlinedInput id="select-multiple-chip" label="Region" />}
+                renderValue={(selected) => {
+                  setPersonName(selected)
+                }}
+                MenuProps={MenuProps}
+              >
+                {names.map((name) => (
+                  <MenuItem
+                    key={name}
+                    value={name}
+                  >
+                    {name}
+                  </MenuItem>
+                ))}
+                <MenuItem
+                >
+                  <button className="btn">Submit Answer</button>
+                </MenuItem>
+              </Select>
+            </FormControl>
           </div>
           <div className="popular">
-            <Button  className="submit-answer"
-            variant="contained"
-            onClick={selectedRegion.push("france")}
-            size="large"
+            <Button className="submit-answer"
+              variant="contained"
+              onClick={(e)=>(setPersonName([...personName,"France"]))}
+              size="large"
             > france
-        </Button>  
+            </Button>
           </div>
+          {personName.map((value, index) => (
+            value === undefined ? null : <Chip onDelete={(e) => (handleDelete(e, index))} key={value} label={value} />
+          ))}
           <Grid
             item
             container
@@ -145,7 +127,7 @@ const By_region = () => {
             md={6}
             style={{ margin: "0 auto" }}
           >
-            
+
             <Button
               className="submitanswerstep4"
               variant="contained"

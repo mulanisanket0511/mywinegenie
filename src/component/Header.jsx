@@ -9,6 +9,16 @@ const Header = () => {
     localStorage.clear();
     navigate("/");
   };
+  const handleReset = () => {
+    localStorage.removeItem("step1");
+    localStorage.removeItem("step2");
+    localStorage.removeItem("step3");
+    localStorage.removeItem("region");
+    localStorage.removeItem("grape-variety");
+    localStorage.removeItem("food-pairing");
+    localStorage.removeItem("occasion");
+    navigate("/step-1");
+  };
   return (
     <div>
       <div className="logo d-flex">
@@ -17,7 +27,7 @@ const Header = () => {
         </a>
         {localStorage.getItem("user") ? (
           <div className="header-buttons text-end">
-            <Button className="button mx-2" variant="contained">
+            <Button className="button mx-2" onClick={handleReset} variant="contained">
               reset
             </Button>
             <Button

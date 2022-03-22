@@ -27,7 +27,6 @@ const Step3 = () => {
     if (checked === "By Region") {
       navigate("/step-3/region");
     }
-
   };
   return (
     <div>
