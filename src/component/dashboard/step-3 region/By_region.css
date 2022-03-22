@@ -30,3 +30,18 @@
 #checkboxes-tags-demo-label{
     margin-top:-4px;
 }
+.submit-answer.dropdown-btn{
+    background-color: white !important;
+    color:#000000 !important;
+    font-family: Noto Sans;
+ font-style: SemiBold;
+ font-size: 18px;
+ width: 180px;
+Vertical-align: Top;
+text-transform: none !important;
+letter-spacing: -0.41px;
+font-weight: 600;
+margin: auto;
+margin-top:0px !important;
+
+}

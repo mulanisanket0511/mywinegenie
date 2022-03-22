@@ -26,6 +26,14 @@ const Step3 = () => {
     localStorage.setItem("step3", checked)
     if (checked === "By Region") {
       navigate("/step-3/region");
+    }else if (checked === "By Occasion") {
+      navigate("/step-3/ocassion");
+    }
+    else if (checked === "By Food Pairing") {
+      navigate("/step-3/food");
+    }
+    else if (checked === "By Grape Variety") {
+      navigate("/step-3/grape");
     }
   };
   return (

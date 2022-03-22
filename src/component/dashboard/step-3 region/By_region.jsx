@@ -2,7 +2,6 @@ import {
   Box,
   Button,
   Card,
-  Checkbox,
   Chip,
   Grid,
 } from "@mui/material";
@@ -13,10 +12,7 @@ import OutlinedInput from "@mui/material/OutlinedInput";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
-import ListItemText from "@mui/material/ListItemText";
 import Select from "@mui/material/Select";
-import TextField from "@mui/material/TextField";
-import Autocomplete from "@mui/material/Autocomplete";
 import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
 import svgicon1 from "../../../asset/component/step2/bottle1step2.svg";
@@ -57,11 +53,11 @@ const By_region = () => {
       personName.splice(index,1)
       setPersonName([...personName])
   }
-  const [checked, setChecked] = React.useState("");
   const navigate = useNavigate();
   const handlesubmitanswer = (e) => {
-    
+    navigate("/step-3/result");
   };
+  localStorage.setItem("region" , JSON.stringify(personName))
   return (
     <div>
       <Box sx={{ maxWidth: 390 }}>
@@ -90,7 +86,7 @@ const By_region = () => {
                 onChange={handleChange}
                 input={<OutlinedInput id="select-multiple-chip" label="Region" />}
                 renderValue={(selected) => {
-                  setPersonName(selected)
+              
                 }}
                 MenuProps={MenuProps}
               >
@@ -104,7 +100,7 @@ const By_region = () => {
                 ))}
                 <MenuItem
                 >
-                  <button className="btn">Submit Answer</button>
+                  <Button className=" submit-answer dropdown-btn">Submit Answer</Button>
                 </MenuItem>
               </Select>
             </FormControl>
