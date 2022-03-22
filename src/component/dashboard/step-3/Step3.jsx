@@ -25,7 +25,7 @@ const Step3 = () => {
   const handlesubmitanswer = (e) => {
     localStorage.setItem("step3", checked)
     if (checked === "By Region") {
-      navigate("/step-4");
+      navigate("/step-3/region");
     }
 
   };

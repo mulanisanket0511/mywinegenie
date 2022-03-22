@@ -18,7 +18,7 @@
     padding: 2px !important;
 }
 .MuiAutocomplete-root.MuiAutocomplete-hasPopupIcon.css-16awh2u-MuiAutocomplete-root{
-    width: 298px !important ;
+
     margin: auto !important;
     margin-top:45px !important
 }
@@ -26,4 +26,7 @@
     margin-top: 69px !important;
     margin: 45px;
     width: 136px;
+}
+#checkboxes-tags-demo-label{
+    margin-top:-4px;
 }

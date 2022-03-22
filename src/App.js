@@ -7,7 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Step1 from "./component/dashboard/step-1/Step1";
 import Step2 from "./component/dashboard/step-2/Step2";
 import Step3 from "./component/dashboard/step-3/Step3";
-import Step4 from "./component/dashboard/step-4/Step4";
+import By_region from "./component/dashboard/step-3 region/By_region";
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
           <Route exact path="/step-1" element={<Step1 />} />
           <Route exact path="/step-2" element={<Step2 />} />
           <Route exact path="/step-3" element={<Step3 />} />
-          <Route exact path="/step-4" element={<Step4 />} />
+          <Route exact path="/step-3/region" element={<By_region />} />
         </Routes>
       </Router>
     </>

@@ -3,10 +3,7 @@ import {
   Button,
   Card,
   Checkbox,
-  FormControlLabel,
   Grid,
-  Radio,
-  RadioGroup,
 } from "@mui/material";
 import React from "react";
 import Title from "../titleview/Title";
@@ -25,7 +22,7 @@ import svgicon1 from "../../../asset/component/step2/bottle1step2.svg";
 import svgicon2 from "../../../asset/component/step2/bottle2step2.svg";
 import svgicon3 from "../../../asset/component/step3/bottle3step3.svg";
 import svgicon4 from "../../../asset/component/step4/bottle4step4.svg";
-import "./step4.css";
+import "./By_region.css";
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
@@ -42,9 +39,11 @@ const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
 const checkedIcon = <CheckBoxIcon fontSize="small" />;
 const names = ["Argentina", "Australia", "Austria", "Bulgaria", "Canada"];
 
-const Step4 = () => {
+const By_region = () => {
   const [checked, setChecked] = React.useState("");
   const [countryName, setcountryName] = React.useState([]);
+  var selectedRegion = []
+  // console.log(selectedRegion);
   const handleCountry = (event) => {
     const {
       target: { value },
@@ -89,7 +88,13 @@ const Step4 = () => {
               options={names}
               disableCloseOnSelect
               getOptionLabel={(option) => option}
-              renderOption={(props, option, { selected }) => (
+              renderOption={(props, option, { selected }) => {
+                if (selected) {
+                  selectedRegion.push(option)
+                  console.log(selectedRegion);
+                }
+                return(
+                  <>
                 <li {...props}>
                   <Checkbox
                     className="checkbox"
@@ -97,23 +102,38 @@ const Step4 = () => {
                     checkedIcon={checkedIcon}
                     style={{ marginRight: 8 }}
                     checked={selected}
+                    
                   />
                   {option}
+              
+               
                 </li>
-              )}
-              style={{ width: 500 }}
-              renderInput={(params) => (
-                <TextField
-                  {...params}
+               <li>
+               <Button  className="submit-answer"
+            variant="contained"
+            onClick={selectedRegion.push("france")}
+            size="large"
+            > france
+        </Button> 
+               </li>
+                </>
+              )}}
+              style={{ width: 300 }}
+              renderInput={(params) => {
+                return(
+                <TextField 
                   label="Region"
-                  
+                  {...params}
                 />
-              )}
+                
+              )}}
             />
+           
           </div>
           <div className="popular">
             <Button  className="submit-answer"
             variant="contained"
+            onClick={selectedRegion.push("france")}
             size="large"
             > france
         </Button>  
@@ -125,6 +145,7 @@ const Step4 = () => {
             md={6}
             style={{ margin: "0 auto" }}
           >
+            
             <Button
               className="submitanswerstep4"
               variant="contained"
@@ -142,4 +163,4 @@ const Step4 = () => {
   );
 };
 
-export default Step4;
+export default By_region;
