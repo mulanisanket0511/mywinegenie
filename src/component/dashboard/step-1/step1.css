@@ -1,67 +1,84 @@
-.css-186caz2{
-    margin:auto;
+.css-186caz2 {
+    margin: auto;
     margin-bottom: 30px;
 }
-.MuiPaper-root.MuiPaper-outlined.MuiPaper-rounded.MuiCard-root.css-1v5z4dq-MuiPaper-root-MuiCard-root{
-    height:720px;
-    margin-top:55px;
+
+.MuiPaper-root.MuiPaper-outlined.MuiPaper-rounded.MuiCard-root.css-1v5z4dq-MuiPaper-root-MuiCard-root {
+    height: 720px;
+    overflow-y: auto !important;
+    margin-top: 55px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
-.icon{
+.MuiPaper-root.MuiPaper-outlined.MuiPaper-rounded.MuiCard-root.css-1v5z4dq-MuiPaper-root-MuiCard-root::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
+
+.icon {
     width: 69%;
     margin: auto;
     margin-top: 27px;
 }
-.question{
+
+.question {
     width: 278px;
     margin: auto;
-margin-top: 20px;
-font-style: normal;
-font-weight: 600;
-font-size: 16px;
-line-height: 22px;
-text-align: center;
-letter-spacing: -0.408px;
-color: #000000;
+    margin-top: 20px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: -0.408px;
+    color: #000000;
 
 }
-.MuiTypography-root.MuiTypography-body1.MuiFormControlLabel-label.css-ahj2mt-MuiTypography-root{
-    margin-left:25px;
+
+.MuiTypography-root.MuiTypography-body1.MuiFormControlLabel-label.css-ahj2mt-MuiTypography-root {
+    margin-left: 25px;
     width: 58px;
-font-style: normal;
-font-weight: 600;
-font-size: 20px;
-line-height: 22px;
-text-align: center;
-letter-spacing: 0.592px;
-color: #000000;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: 0.592px;
+    color: #000000;
 
 }
-.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root{
+
+.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
     margin-left: 42px !important;
 }
-.option{
-    margin-block:55px;
+
+.option {
+    margin-block: 55px;
     width: 80%;
     margin-left: 20px;
 }
-.MuiFormControlLabel-root.MuiFormControlLabel-labelPlacementEnd.css-j204z7-MuiFormControlLabel-root{
+
+.MuiFormControlLabel-root.MuiFormControlLabel-labelPlacementEnd.css-j204z7-MuiFormControlLabel-root {
     margin-block: 10px;
 }
-.submit-answer{
+
+.submit-answer {
     background-color: white !important;
-    color:#000000 !important;
+    color: #000000 !important;
     margin-top: -55px !important;
 }
-.submit{
- font-family: Noto Sans;
- font-style: SemiBold;
- font-size: 23px;
- line-height: 170%;
-Vertical-align: Top;
-text-transform: none !important;
-letter-spacing: -0.41px;
-font-weight: 600;
+
+.submit {
+    font-family: Noto Sans;
+    font-style: SemiBold;
+    font-size: 23px;
+    line-height: 170%;
+    Vertical-align: Top;
+    text-transform: none !important;
+    letter-spacing: -0.41px;
+    font-weight: 600;
 }
-.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeLarge .MuiButton-containedSizeLarge.MuiButton-fullWidth.MuiButtonBase-root.submit-answer .css-189e9pj-MuiButtonBase-root-MuiButton-root{
+
+.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeLarge .MuiButton-containedSizeLarge.MuiButton-fullWidth.MuiButtonBase-root.submit-answer .css-189e9pj-MuiButtonBase-root-MuiButton-root {
     margin-top: -55px !important;
 }

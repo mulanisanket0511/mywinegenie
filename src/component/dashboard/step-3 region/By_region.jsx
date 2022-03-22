@@ -33,8 +33,8 @@ const MenuProps = {
   },
 };
 
-const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
-const checkedIcon = <CheckBoxIcon fontSize="small" />;
+// const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
+// const checkedIcon = <CheckBoxIcon fontSize="small" />;
 const names = ["Argentina", "Australia", "Austria", "Bulgaria", "Canada"];
 
 const By_region = () => {
@@ -42,22 +42,22 @@ const By_region = () => {
   const [personName, setPersonName] = React.useState([]);
   console.log(personName);
   const handleChange = (event) => {
-      const {
-          target: { value },
-      } = event;
-      setPersonName(
-          typeof value === 'string' ? value.split(',') : value,
-      );
+    const {
+      target: { value },
+    } = event;
+    setPersonName(
+      typeof value === 'string' ? value.split(',') : value,
+    );
   };
-  const handleDelete = (e,index) => {
-      personName.splice(index,1)
-      setPersonName([...personName])
+  const handleDelete = (e, index) => {
+    personName.splice(index, 1)
+    setPersonName([...personName])
   }
   const navigate = useNavigate();
   const handlesubmitanswer = (e) => {
+    localStorage.setItem("region" , JSON.stringify(personName))
     navigate("/step-3/result");
   };
-  localStorage.setItem("region" , JSON.stringify(personName))
   return (
     <div>
       <Box sx={{ maxWidth: 390 }}>
@@ -108,14 +108,16 @@ const By_region = () => {
           <div className="popular">
             <Button className="submit-answer"
               variant="contained"
-              onClick={(e)=>(setPersonName([...personName,"France"]))}
+              onClick={(e) => (setPersonName([...personName, "France"]))}
               size="large"
             > france
             </Button>
           </div>
-          {personName.map((value, index) => (
-            value === undefined ? null : <Chip onDelete={(e) => (handleDelete(e, index))} key={value} label={value} />
-          ))}
+          <div className="px-4">
+            {personName.map((value, index) => (
+              value === undefined ? null : <Chip className="m-2" onDelete={(e) => (handleDelete(e, index))} key={value} label={value} />
+            ))}
+          </div>
           <Grid
             item
             container
