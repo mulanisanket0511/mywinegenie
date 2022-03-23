@@ -22,10 +22,15 @@ const Loginform = () => {
       seterrorState({ nameErr: false, emailErr: false });
     }
   };
+
+  // const validation =  /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
   const handleSubmit = () => {
     if (user.name === "" && user.email === "") {
       seterrorState({ nameErr: true, emailErr: true });
     }
+    // else if(user.email === validation){
+    //      seterrorState({emailErr: false})
+    // }
     else{
     const userData = JSON.stringify(user)
     localStorage.setItem("user",userData)

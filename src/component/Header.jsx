@@ -13,6 +13,11 @@ const Header = () => {
     localStorage.removeItem("step1");
     localStorage.removeItem("step2");
     localStorage.removeItem("step3");
+    localStorage.removeItem("Red");
+    localStorage.removeItem("White");
+    localStorage.removeItem("Rose");
+    localStorage.removeItem("Sparkling");
+    localStorage.removeItem("Fortfield");
     localStorage.removeItem("region");
     localStorage.removeItem("grape-variety");
     localStorage.removeItem("food-pairing");

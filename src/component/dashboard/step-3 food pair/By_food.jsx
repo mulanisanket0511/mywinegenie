@@ -27,7 +27,10 @@ const By_food = () => {
   const foodvariety = ["mild", "medium", "spicy", "very spicy"];
 
   const foodtype = ["beef", "pork", "game", "chicken", "fish","vaggies"];
-  const handlesubmitanswer = () => {};
+  const handlesubmitanswer = () => {
+    localStorage.setItem("food-pairing",select)
+    navigate("/result")
+  };
 
   return (
     <div>
