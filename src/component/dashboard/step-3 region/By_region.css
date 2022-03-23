@@ -1,46 +1,61 @@
-.css-2m9kme-MuiFormControl-root{
-    margin:46px !important;
-    width:276px !important;
+.css-2m9kme-MuiFormControl-root {
+    margin-inline: 52px !important;
+    margin-block: 25px !important;
+    width: 276px !important;
 }
-.MuiMenuItem-root.MuiMenuItem-gutters.MuiButtonBase-root.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root{
+
+.MuiMenuItem-root.MuiMenuItem-gutters.MuiButtonBase-root.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root {
     border-bottom: 2px solid black !important;
 }
-.submitanswerstep4{
+
+.submitanswerstep4 {
     background-color: white !important;
-    color:#000000 !important;
+    color: #000000 !important;
     margin-top: 0px !important;
 }
-.checkbox{
+
+.checkbox {
     border-radius: 50% !important;
 }
 
-.css-16awh2u-MuiAutocomplete-root .MuiOutlinedInput-root{
+.css-16awh2u-MuiAutocomplete-root .MuiOutlinedInput-root {
     padding: 2px !important;
 }
-.MuiAutocomplete-root.MuiAutocomplete-hasPopupIcon.css-16awh2u-MuiAutocomplete-root{
-    margin: auto !important;
-    margin-top:45px !important
-}
-.popular{
-    margin-top: 69px !important;
-    margin: 45px;
-    width: 136px;
-}
-#checkboxes-tags-demo-label{
-    margin-top:-4px;
-}
-.submit-answer.dropdown-btn{
-    background-color: white !important;
-    color:#000000 !important;
-    font-family: Noto Sans;
- font-style: SemiBold;
- font-size: 18px;
- width: 180px;
-Vertical-align: Top;
-text-transform: none !important;
-letter-spacing: -0.41px;
-font-weight: 600;
-margin: auto;
-margin-top:0px !important;
 
+.MuiAutocomplete-root.MuiAutocomplete-hasPopupIcon.css-16awh2u-MuiAutocomplete-root {
+    margin: auto !important;
+    margin-top: 45px !important
+}
+
+.popular {
+    margin-inline: 45px;
+}
+.col-5.submit-answer{
+    margin-top: 25px !important;
+    margin-inline: 10px;
+}
+
+#checkboxes-tags-demo-label {
+    margin-top: -4px;
+}
+
+.submit-answer.dropdown-btn {
+    background-color: white !important;
+    color: #000000 !important;
+    font-family: Noto Sans;
+    font-style: SemiBold;
+    font-size: 18px;
+    width: 180px;
+    Vertical-align: Top;
+    text-transform: none !important;
+    letter-spacing: -0.41px;
+    font-weight: 600;
+    margin: auto;
+    margin-top: 0px !important;
+
+}
+
+.submit-answer.disabled {
+    background-color: gray !important;
+    color: white !important;
 }

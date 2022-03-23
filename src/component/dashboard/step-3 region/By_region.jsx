@@ -34,6 +34,7 @@ const MenuProps = {
 };
 
 const names = ["Argentina", "Australia", "Austria", "Bulgaria", "Canada"];
+const PopularRegion = ["French", "Itly", "California", "Spain", "BC", "Australia"];
 
 const By_region = () => {
   const theme = useTheme();
@@ -53,7 +54,7 @@ const By_region = () => {
   }
   const navigate = useNavigate();
   const handlesubmitanswer = (e) => {
-    localStorage.setItem("region" , JSON.stringify(personName))
+    localStorage.setItem("region", JSON.stringify(personName))
     navigate("/step-3/result");
   };
   return (
@@ -84,7 +85,7 @@ const By_region = () => {
                 onChange={handleChange}
                 input={<OutlinedInput id="select-multiple-chip" label="Region" />}
                 renderValue={(selected) => {
-              
+
                 }}
                 MenuProps={MenuProps}
               >
@@ -104,14 +105,26 @@ const By_region = () => {
             </FormControl>
           </div>
           <div className="popular">
-            <Button className="submit-answer"
-              variant="contained"
-              onClick={(e) => (setPersonName([...personName, "France"]))}
-              size="large"
-            > france
-            </Button>
+            {PopularRegion.map((value) => (
+              <>
+                {personName.includes(value) ?
+                  <Button className="col-5 submit-answer disabled"
+                    variant="contained"
+                    size="large"
+                  > {value}
+                  </Button>
+                  :
+                  <Button className="col-5 submit-answer"
+                    variant="contained"
+                    onClick={(e) => (setPersonName([...personName, value]))}
+                    size="large"
+                  > {value}
+                  </Button>
+                }
+              </>
+            ))}
           </div>
-          <div className="px-4">
+          <div className="px-4 mt-4">
             {personName.map((value, index) => (
               value === undefined ? null : <Chip className="m-2" onDelete={(e) => (handleDelete(e, index))} key={value} label={value} />
             ))}
