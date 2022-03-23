@@ -25,9 +25,12 @@ const Step1 = () => {
       if (value === true) {
         step1_value_arr.push(budget[key])
       }
+      localStorage.setItem("step1",JSON.stringify(step1_value_arr));
+      if(value === true){
+        navigate("/step-2")
+        
+      }
     }
-    localStorage.setItem("step1",JSON.stringify(step1_value_arr));
-    navigate("/step-2")
   }
   return (
     <div>

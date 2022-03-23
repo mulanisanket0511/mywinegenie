@@ -1,8 +1,37 @@
 .icon-food{
-    width:292px;
+    width:282px;
     margin:auto;
 }
 .foodicon{
     margin: 12px ;
     margin-top: 25px;
+}
+.questionfood{
+font-style: SemiBold;
+margin-top:15px !important;
+margin: auto;
+width: 325px;
+margin: auto;
+Vertical-align: Top;
+text-align: center;
+letter-spacing: -0.41px;
+font-weight: 600;
+}
+.food-input{
+    margin: auto;
+    width: 261px ;
+    margin-top: 34px;
+    margin-bottom: 26px;
+
+}
+input{
+    width: 261px !important;
+}
+.col-5.submit-answer{
+    margin-top: 25px !important;
+    margin-inline: 10px;
+}
+.submit-answer-food{
+    background-color: white !important;
+    color: #000000 !important;
 }

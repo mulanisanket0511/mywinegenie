@@ -27,6 +27,7 @@ const DropDownWithChips = ({ grape }) => {
       const handleDelete = (e, index) => {
         top.splice(index, 1)
         setTop([...top])
+      
       }
     return (
         <div>

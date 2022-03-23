@@ -25,10 +25,12 @@ const Step2 = () => {
       if (value === true) {
         step2_value_arr.push(type_of_wine[key])
       }
+      localStorage.setItem("step2",JSON.stringify(step2_value_arr));
+      if(value === true){
+      navigate("/step-3")
     }
-    localStorage.setItem("step2",JSON.stringify(step2_value_arr));
-    navigate("/step-3")
-  }
+    }
+}
   return (
     <div>
       <Box sx={{ maxWidth: 390 }}>

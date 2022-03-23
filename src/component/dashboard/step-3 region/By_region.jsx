@@ -39,7 +39,6 @@ const PopularRegion = ["French", "Itly", "California", "Spain", "BC", "Australia
 const By_region = () => {
   const theme = useTheme();
   const [personName, setPersonName] = React.useState([]);
-  console.log(personName);
   const handleChange = (event) => {
     const {
       target: { value },
@@ -124,7 +123,7 @@ const By_region = () => {
               </>
             ))}
           </div>
-          <div className="px-4 mt-4">
+          <div className="px-4">
             {personName.map((value, index) => (
               value === undefined ? null : <Chip className="m-2" onDelete={(e) => (handleDelete(e, index))} key={value} label={value} />
             ))}
